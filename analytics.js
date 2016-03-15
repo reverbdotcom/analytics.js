@@ -7217,10 +7217,11 @@ module.exports = {
   'adwords': require('analytics.js-integration-adwords'),
   'google-analytics': require('analytics.js-integration-google-analytics'),
   'mixpanel': require('analytics.js-integration-mixpanel'),
+  'fullstory': require('analytics.js-integration-fullstory'),
   'facebook-pixel': require('analytics.js-integration-facebook-pixel')
 };
 
-}, {"analytics.js-integration-adwords":81,"analytics.js-integration-google-analytics":82,"analytics.js-integration-mixpanel":83,"analytics.js-integration-facebook-pixel":84}],
+}, {"analytics.js-integration-adwords":81,"analytics.js-integration-google-analytics":82,"analytics.js-integration-mixpanel":83,"analytics.js-integration-fullstory":84,"analytics.js-integration-facebook-pixel":85}],
 81: [function(require, module, exports) {
 
 /**
@@ -7311,8 +7312,8 @@ AdWords.prototype.track = function(track) {
   });
 };
 
-}, {"each":4,"analytics.js-integration":85}],
-85: [function(require, module, exports) {
+}, {"each":4,"analytics.js-integration":86}],
+86: [function(require, module, exports) {
 
 /**
  * Module dependencies.
@@ -7376,8 +7377,8 @@ function createIntegration(name){
 
 module.exports = createIntegration;
 
-}, {"bind":86,"clone":13,"debug":87,"defaults":16,"extend":88,"slug":89,"./protos":90,"./statics":91}],
-86: [function(require, module, exports) {
+}, {"bind":87,"clone":13,"debug":88,"defaults":16,"extend":89,"slug":90,"./protos":91,"./statics":92}],
+87: [function(require, module, exports) {
 
 var bind = require('bind')
   , bindAll = require('bind-all');
@@ -7419,15 +7420,15 @@ function bindMethods (obj, methods) {
   return obj;
 }
 }, {"bind":56,"bind-all":57}],
-87: [function(require, module, exports) {
+88: [function(require, module, exports) {
 if ('undefined' == typeof window) {
   module.exports = require('./lib/debug');
 } else {
   module.exports = require('./debug');
 }
 
-}, {"./lib/debug":92,"./debug":93}],
-92: [function(require, module, exports) {
+}, {"./lib/debug":93,"./debug":94}],
+93: [function(require, module, exports) {
 /**
  * Module dependencies.
  */
@@ -7577,7 +7578,7 @@ function coerce(val) {
 }
 
 }, {}],
-93: [function(require, module, exports) {
+94: [function(require, module, exports) {
 
 /**
  * Expose `debug()` as the module.
@@ -7717,7 +7718,7 @@ try {
 } catch(e){}
 
 }, {}],
-88: [function(require, module, exports) {
+89: [function(require, module, exports) {
 
 module.exports = function extend (object) {
     // Takes an unlimited number of extenders.
@@ -7734,7 +7735,7 @@ module.exports = function extend (object) {
     return object;
 };
 }, {}],
-89: [function(require, module, exports) {
+90: [function(require, module, exports) {
 
 /**
  * Generate a slug from the given `str`.
@@ -7760,7 +7761,7 @@ module.exports = function (str, options) {
 };
 
 }, {}],
-90: [function(require, module, exports) {
+91: [function(require, module, exports) {
 /* global setInterval:true setTimeout:true */
 
 /**
@@ -8247,8 +8248,8 @@ function render(template, locals){
   }, {}, template.attrs);
 }
 
-}, {"emitter":8,"after":10,"each":94,"analytics-events":95,"fmt":96,"foldl":17,"load-iframe":97,"load-script":98,"to-no-case":99,"next-tick":58,"every":100,"is":101}],
-94: [function(require, module, exports) {
+}, {"emitter":8,"after":10,"each":95,"analytics-events":96,"fmt":97,"foldl":17,"load-iframe":98,"load-script":99,"to-no-case":100,"next-tick":58,"every":101,"is":102}],
+95: [function(require, module, exports) {
 
 /**
  * Module dependencies.
@@ -8339,8 +8340,8 @@ function array(obj, fn, ctx) {
   }
 }
 
-}, {"type":102,"component-type":102,"to-function":75}],
-102: [function(require, module, exports) {
+}, {"type":103,"component-type":103,"to-function":75}],
+103: [function(require, module, exports) {
 
 /**
  * toString ref.
@@ -8375,7 +8376,7 @@ module.exports = function(val){
 };
 
 }, {}],
-95: [function(require, module, exports) {
+96: [function(require, module, exports) {
 
 module.exports = {
   removedProduct: /^[ _]?removed[ _]?product[ _]?$/i,
@@ -8395,7 +8396,7 @@ module.exports = {
 };
 
 }, {}],
-96: [function(require, module, exports) {
+97: [function(require, module, exports) {
 
 /**
  * toString.
@@ -8440,7 +8441,7 @@ function fmt(str){
 }
 
 }, {}],
-97: [function(require, module, exports) {
+98: [function(require, module, exports) {
 
 /**
  * Module dependencies.
@@ -8502,8 +8503,8 @@ module.exports = function loadIframe(options, fn){
   // give it an ID or attributes.
   return iframe;
 };
-}, {"script-onload":103,"next-tick":58,"type":48}],
-103: [function(require, module, exports) {
+}, {"script-onload":104,"next-tick":58,"type":48}],
+104: [function(require, module, exports) {
 
 // https://github.com/thirdpartyjs/thirdpartyjs-code/blob/master/examples/templates/02/loading-files/index.html
 
@@ -8559,7 +8560,7 @@ function attach(el, fn){
 }
 
 }, {}],
-98: [function(require, module, exports) {
+99: [function(require, module, exports) {
 
 /**
  * Module dependencies.
@@ -8620,8 +8621,8 @@ module.exports = function loadScript(options, fn){
   // give it an ID or attributes.
   return script;
 };
-}, {"script-onload":103,"next-tick":58,"type":48}],
-99: [function(require, module, exports) {
+}, {"script-onload":104,"next-tick":58,"type":48}],
+100: [function(require, module, exports) {
 
 /**
  * Expose `toNoCase`.
@@ -8694,7 +8695,7 @@ function uncamelize (string) {
   });
 }
 }, {}],
-100: [function(require, module, exports) {
+101: [function(require, module, exports) {
 'use strict';
 
 /**
@@ -8747,7 +8748,7 @@ var every = function every(predicate, collection) {
 module.exports = every;
 
 }, {"each":67}],
-101: [function(require, module, exports) {
+102: [function(require, module, exports) {
 
 var isEmpty = require('is-empty');
 
@@ -8824,7 +8825,7 @@ function generate (type) {
   };
 }
 }, {"is-empty":47,"type":48,"component-type":48}],
-91: [function(require, module, exports) {
+92: [function(require, module, exports) {
 
 /**
  * Module dependencies.
@@ -8988,8 +8989,8 @@ function objectify(str) {
   };
 }
 
-}, {"emitter":8,"domify":104,"each":94,"includes":73}],
-104: [function(require, module, exports) {
+}, {"emitter":8,"domify":105,"each":95,"includes":73}],
+105: [function(require, module, exports) {
 
 /**
  * Expose `parse`.
@@ -10020,8 +10021,8 @@ function createProductTrack(track, properties) {
   return new Track({ properties: properties });
 }
 
-}, {"facade":9,"defaults":105,"obj-case":43,"each":4,"analytics.js-integration":85,"is":19,"object":21,"global-queue":106,"select":107,"use-https":108}],
-105: [function(require, module, exports) {
+}, {"facade":9,"defaults":106,"obj-case":43,"each":4,"analytics.js-integration":86,"is":19,"object":21,"global-queue":107,"select":108,"use-https":109}],
+106: [function(require, module, exports) {
 /**
  * Expose `defaults`.
  */
@@ -10038,7 +10039,7 @@ function defaults (dest, defaults) {
 };
 
 }, {}],
-106: [function(require, module, exports) {
+107: [function(require, module, exports) {
 
 /**
  * Expose `generate`.
@@ -10068,7 +10069,7 @@ function generate (name, options) {
   };
 }
 }, {}],
-107: [function(require, module, exports) {
+108: [function(require, module, exports) {
 
 /**
  * Module dependencies.
@@ -10099,7 +10100,7 @@ module.exports = function(arr, fn){
 };
 
 }, {"to-function":75}],
-108: [function(require, module, exports) {
+109: [function(require, module, exports) {
 
 /**
  * Protocol.
@@ -10449,8 +10450,8 @@ function extendTraits(arr) {
   return arr;
 }
 
-}, {"alias":109,"convert-dates":110,"obj-case":43,"includes":73,"analytics.js-integration":85,"to-iso-string":111,"pick":112,"is":45,"indexof":31}],
-109: [function(require, module, exports) {
+}, {"alias":110,"convert-dates":111,"obj-case":43,"includes":73,"analytics.js-integration":86,"to-iso-string":112,"pick":113,"is":45,"indexof":31}],
+110: [function(require, module, exports) {
 
 var type = require('type');
 
@@ -10514,7 +10515,7 @@ function aliasByFunction (obj, convert) {
   return output;
 }
 }, {"type":48,"clone":50}],
-110: [function(require, module, exports) {
+111: [function(require, module, exports) {
 
 var is = require('is');
 
@@ -10550,7 +10551,7 @@ function convertDates (obj, convert) {
   return obj;
 }
 }, {"is":19,"clone":13}],
-111: [function(require, module, exports) {
+112: [function(require, module, exports) {
 
 /**
  * Expose `toIsoString`.
@@ -10592,7 +10593,7 @@ function pad (number) {
   return n.length === 1 ? '0' + n : n;
 }
 }, {}],
-112: [function(require, module, exports) {
+113: [function(require, module, exports) {
 'use strict';
 
 var objToString = Object.prototype.toString;
@@ -10669,6 +10670,245 @@ module.exports = pick;
 
 }, {}],
 84: [function(require, module, exports) {
+
+/**
+ * Module dependencies.
+ */
+
+var camel = require('to-camel-case');
+var foldl = require('foldl');
+var integration = require('analytics.js-integration');
+var is = require('is');
+
+/**
+ * Expose `FullStory` integration.
+ *
+ * https://www.fullstory.com/docs/developer
+ */
+
+var FullStory = module.exports = integration('FullStory')
+  .option('org', '')
+  .option('debug', false)
+  .tag('<script src="https://www.fullstory.com/s/fs.js"></script>');
+
+/**
+ * Initialize.
+ */
+
+FullStory.prototype.initialize = function() {
+  var self = this;
+  window._fs_debug = this.options.debug;
+  window._fs_host = 'www.fullstory.com';
+  window._fs_org = this.options.org;
+
+  /* eslint-disable */
+  (function(m,n,e,t,l,o,g,y){
+    g=m[e]=function(a,b){g.q?g.q.push([a,b]):g._api(a,b);};g.q=[];
+    g.identify=function(i,v){g(l,{uid:i});if(v)g(l,v)};g.setUserVars=function(v){FS(l,v)};
+    g.setSessionVars=function(v){FS('session',v)};g.setPageVars=function(v){FS('page',v)};
+    self.ready();
+    self.load();
+  })(window,document,'FS','script','user');
+  /* eslint-enable */
+};
+
+/**
+ * Loaded?
+ *
+ * @return {Boolean}
+ */
+
+FullStory.prototype.loaded = function() {
+  return !!window.FS;
+};
+
+/**
+ * Identify.  But, use FS.setUserVars if we only have an anonymous id, keeping the
+ * user id unbound until we (hopefully) get a login page or similar and another call
+ * to identify with more useful contents.  (This because FullStory doesn't like the
+ * user id changing once set.)
+ *
+ * @param {Identify} identify
+ */
+
+FullStory.prototype.identify = function(identify) {
+  var traits = identify.traits({ name: 'displayName' });
+
+  var newTraits = foldl(function(results, value, key) {
+    if (key !== 'id') results[key === 'displayName' || key === 'email' ? key : convert(key, value)] = value;
+    return results;
+  }, {}, traits);
+  if (identify.userId()) {
+    window.FS.identify(String(identify.userId()), newTraits);
+  } else {
+    newTraits.segmentAnonymousId_str = String(identify.anonymousId());
+    window.FS.setUserVars(newTraits);
+  }
+};
+
+/**
+* Convert to FullStory format.
+*
+* @param {string} trait
+* @param {*} value
+*/
+
+function convert(key, value) {
+  key = camel(key);
+  if (is.string(value)) return key + '_str';
+  if (isInt(value)) return key + '_int';
+  if (isFloat(value)) return key + '_real';
+  if (is.date(value)) return key + '_date';
+  if (is.boolean(value)) return key + '_bool';
+  return key;  // Bad FullStory type, but don't mess with the key so error messages name it
+}
+
+/**
+ * Check if n is a float.
+ */
+
+function isFloat(n) {
+  return n === +n && n !== (n | 0);
+}
+
+/**
+ * Check if n is an integer.
+ */
+
+function isInt(n) {
+  return n === +n && n === (n | 0);
+}
+
+}, {"to-camel-case":114,"foldl":17,"analytics.js-integration":86,"is":19}],
+114: [function(require, module, exports) {
+
+var toSpace = require('to-space-case');
+
+
+/**
+ * Expose `toCamelCase`.
+ */
+
+module.exports = toCamelCase;
+
+
+/**
+ * Convert a `string` to camel case.
+ *
+ * @param {String} string
+ * @return {String}
+ */
+
+
+function toCamelCase (string) {
+  return toSpace(string).replace(/\s(\w)/g, function (matches, letter) {
+    return letter.toUpperCase();
+  });
+}
+}, {"to-space-case":115}],
+115: [function(require, module, exports) {
+
+var clean = require('to-no-case');
+
+
+/**
+ * Expose `toSpaceCase`.
+ */
+
+module.exports = toSpaceCase;
+
+
+/**
+ * Convert a `string` to space case.
+ *
+ * @param {String} string
+ * @return {String}
+ */
+
+
+function toSpaceCase (string) {
+  return clean(string).replace(/[\W_]+(.|$)/g, function (matches, match) {
+    return match ? ' ' + match : '';
+  });
+}
+}, {"to-no-case":116}],
+116: [function(require, module, exports) {
+
+/**
+ * Expose `toNoCase`.
+ */
+
+module.exports = toNoCase;
+
+
+/**
+ * Test whether a string is camel-case.
+ */
+
+var hasSpace = /\s/;
+var hasCamel = /[a-z][A-Z]/;
+var hasSeparator = /[\W_]/;
+
+
+/**
+ * Remove any starting case from a `string`, like camel or snake, but keep
+ * spaces and punctuation that may be important otherwise.
+ *
+ * @param {String} string
+ * @return {String}
+ */
+
+function toNoCase (string) {
+  if (hasSpace.test(string)) return string.toLowerCase();
+
+  if (hasSeparator.test(string)) string = unseparate(string);
+  if (hasCamel.test(string)) string = uncamelize(string);
+  return string.toLowerCase();
+}
+
+
+/**
+ * Separator splitter.
+ */
+
+var separatorSplitter = /[\W_]+(.|$)/g;
+
+
+/**
+ * Un-separate a `string`.
+ *
+ * @param {String} string
+ * @return {String}
+ */
+
+function unseparate (string) {
+  return string.replace(separatorSplitter, function (m, next) {
+    return next ? ' ' + next : '';
+  });
+}
+
+
+/**
+ * Camelcase splitter.
+ */
+
+var camelSplitter = /(.)([A-Z]+)/g;
+
+
+/**
+ * Un-camelcase a `string`.
+ *
+ * @param {String} string
+ * @return {String}
+ */
+
+function uncamelize (string) {
+  return string.replace(camelSplitter, function (m, previous, uppers) {
+    return previous + ' ' + uppers.toLowerCase().split('').join(' ');
+  });
+}
+}, {}],
+85: [function(require, module, exports) {
 
 /**
  * Module dependencies.
@@ -10897,7 +11137,7 @@ function formatRevenue(revenue) {
   return Number(revenue || 0).toFixed(2);
 }
 
-}, {"analytics.js-integration":85,"foldl":17,"each":67}],
+}, {"analytics.js-integration":86,"foldl":17,"each":67}],
 5: [function(require, module, exports) {
 module.exports = {
   "name": "analytics",

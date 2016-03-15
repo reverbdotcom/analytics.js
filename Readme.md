@@ -7,6 +7,7 @@ analytics.js-integration-adwords: "1.0.5",
 analytics.js-integration-google-analytics: "1.4.0",
 analytics.js-integration-mixpanel: "1.4.1",
 analytics.js-integration-facebook-pixel: "1.0.3"
+analytics.js-integration-fullstory": "1.0.8"
 ```
 
 

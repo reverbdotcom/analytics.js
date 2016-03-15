@@ -16,6 +16,7 @@
     "segment-integrations/analytics.js-integration-adwords": "1.0.5",
     "segment-integrations/analytics.js-integration-google-analytics": "1.4.0",
     "segment-integrations/analytics.js-integration-mixpanel": "1.4.1",
+    "segment-integrations/analytics.js-integration-fullstory": "1.0.8",
     "reverbdotcom/analytics.js-integration-facebook-pixel": "1.0.3"
   }
 }
