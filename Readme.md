@@ -1,3 +1,15 @@
+## Fork Changes
+
+This fork of analytics.js includes the following integrations:
+
+```
+analytics.js-integration-adwords: "1.0.5",
+analytics.js-integration-google-analytics: "1.4.0",
+analytics.js-integration-mixpanel: "1.4.1",
+analytics.js-integration-facebook-pixel: "1.0.3"
+```
+
+
 # Analytics.js
 
 Analytics.js makes it easy to collect customer data and send it to many different tools using a single, unified API.
